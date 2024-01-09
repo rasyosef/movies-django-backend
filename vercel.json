@@ -22,5 +22,5 @@
             "dest": "django_project/wsgi.py"
         }
     ],
-    "outputDirectory": "build"
+    "outputDirectory": "dist"
 }
