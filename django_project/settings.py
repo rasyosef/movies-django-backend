@@ -80,11 +80,15 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_WHITELIST = (
+    "https://movies-react-frontend.vercel.app",
     "http://localhost:3000",
     "http://localhost:8000",
 )
 
-CSRF_TRUSTED_ORIGINS = ["http://localhost:3000"]
+CSRF_TRUSTED_ORIGINS = [
+    "https://movies-react-frontend.vercel.app",
+    "http://localhost:3000",
+]
 
 ROOT_URLCONF = "django_project.urls"
 
