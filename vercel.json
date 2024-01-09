@@ -8,13 +8,19 @@
         },
         {
             "src": "build.sh",
-            "use": "@vercel/static-build"
+            "use": "@vercel/static-build",
+            "config": { "destDir": "staticfiles" }
         }
     ],
     "routes": [
         {
+            "src": "/static/(.*)",
+            "dest": "/static/$1"
+        },
+        {
             "src": "/(.*)",
             "dest": "django_project/wsgi.py"
         }
-    ]
+    ],
+    "outputDirectory": "."
 }
